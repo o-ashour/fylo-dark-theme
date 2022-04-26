@@ -91,7 +91,8 @@ h6,
     border: none;
     color: $neutral;
     margin-bottom: 2em;
-    padding: 1.1em 5em;
+    // padding: 1.1em 5em;
+    padding: 1.1em 0;
     border-radius: 2em;
     font-size: 0.8rem;
     font-weight: weight('semi-bold');
@@ -342,6 +343,46 @@ h6,
       }
     }
   }
+
+/* Adjust for larger screen size */
+@media (min-width: map-get($breakpoints, 'medium')) {
+  .header {
+    padding: 5.5em 6em;
+    &__logo {
+      width: 12.5em;
+    }
+
+    &__link {
+      font-size: 1rem;
+      margin-left: 3.5em;
+    }
+  }
+
+  .hero {
+    &__title {
+      width: 52%;
+      font-size: 2.5rem;
+      line-height: 1.45;
+      margin: 0 auto;
+      margin-top: 0.25em;
+      // padding: 0em 7em;
+    }
+
+    &__desc {
+      font-size: 1.2rem;
+      width: 57%;
+      margin: 1.5em auto;
+      margin-bottom: 1.75em;
+      padding: 0 5em;
+    }
+
+    .btn--primary {
+      width: 21%;
+      font-size: 1rem;
+      padding: 1.2em 0em;
+    }
+  }
+}
 
 
   /**
