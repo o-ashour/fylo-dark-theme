@@ -1,0 +1,371 @@
+/* current issues: background image (mobile), site deployment */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+iframe,
+video,
+audio {
+  max-width: 100%;
+  border: 0;
+}
+
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(218deg, 28%, 13%);
+  color: hsl(0deg, 0%, 100%);
+  /* Open Sans font */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  /* base font-size is 14px */
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.header__links,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn {
+  /* raleway font for headers and headings */
+  font-family: "Raleway", sans-serif;
+}
+
+.header {
+  background-color: hsl(217deg, 28%, 15%);
+  padding: 0 1.65em;
+  padding-top: 2em;
+  padding-bottom: 2.25em;
+}
+.header__logo {
+  width: 6.2em;
+}
+.header__links {
+  float: right;
+}
+.header__link {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-left: 1.2em;
+}
+
+/* styles for hero section */
+.hero {
+  text-align: center;
+  margin-bottom: 8em;
+  padding: 0 1.65em;
+  padding-top: 1em;
+  background: url("/bg-curvy-mobile.446062bd.svg") no-repeat bottom;
+  background-size: contain;
+  background-color: hsl(217deg, 28%, 15%);
+  /* styles for main buttons */
+}
+.hero__img {
+  margin-bottom: 1.75em;
+}
+.hero__title {
+  margin-bottom: 0.65em;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.hero__desc {
+  margin-bottom: 2em;
+}
+.hero .btn--primary {
+  width: 77%;
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 2em;
+  padding: 1.1em 5em;
+  border-radius: 2em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* styles for feature section */
+.features {
+  text-align: center;
+  padding: 0 1.65em;
+  margin-bottom: 10em;
+}
+.features .feature__img {
+  margin-bottom: 1.75em;
+  width: 4.2em;
+}
+.features .feature__title {
+  margin-bottom: 0.7em;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.features .feature__desc {
+  margin-bottom: 6em;
+}
+
+/* styles for call-to-action section */
+.c2a {
+  margin-bottom: 8em;
+  padding: 0 1.65em;
+}
+.c2a .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.c2a__img {
+  align-self: center;
+}
+.c2a__content {
+  margin-top: 2.5em;
+}
+.c2a__title {
+  font-size: 1.05rem;
+  margin-bottom: 1em;
+  margin-left: 0.25em;
+  font-weight: 600;
+}
+.c2a .btn--secondary {
+  padding: 0 0 0.4em;
+  color: hsl(176deg, 68%, 64%);
+  background: transparent;
+  border: none;
+  border-bottom: 0.1em solid;
+}
+.c2a .btn--secondary i {
+  position: relative;
+  top: 0.28em;
+  margin-left: 0.25em;
+}
+
+/* styles for testimonial section */
+.testimonials {
+  padding-top: 1.5em;
+  /* pseudo class for placing quote background */
+}
+.testimonials::before {
+  background: url("/bg-quotes.90015005.png");
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  height: 2em;
+  width: 100%;
+  background-size: 1.5em;
+  left: 3em;
+  z-index: -1;
+}
+
+.testimonial {
+  background: hsl(219deg, 30%, 18%);
+  margin: 1.75em 2.75em;
+  padding: 1.75em 1.5em 1.5em;
+  border-radius: 0.2rem;
+}
+.testimonial:nth-child(1) {
+  margin-top: 1.05em;
+}
+.testimonial__desc {
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+.testimonial__author {
+  margin-top: 1.5em;
+}
+.testimonial .author__avatar {
+  width: 2.75em;
+  border-radius: 50%;
+  float: left;
+  margin-right: 0.75em;
+  overflow: hidden;
+}
+.testimonial .author__name {
+  /* adjusts the h3 headings here to Open Sans font instead of default Raleway */
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.01em;
+}
+.testimonial .author__desc {
+  font-size: 0.7rem;
+}
+
+/* styles for newsletter sign-up section */
+.newsletter {
+  background: hsl(217deg, 28%, 15%);
+  margin: 10em 1.65em 1em;
+  padding: 2em;
+  border-radius: 0.2rem;
+}
+.newsletter__content {
+  text-align: center;
+  margin-bottom: 1.75em;
+}
+.newsletter__title {
+  margin-bottom: 1em;
+}
+.newsletter__form {
+  /* styles for form email input */
+  /* styles for email submit button */
+}
+.newsletter__form [type=email], .newsletter__form [type=submit] {
+  border: none;
+  width: 100%;
+  padding: 1.2em 2.4em;
+  border-radius: 2em;
+  font-size: 0.7rem;
+}
+.newsletter__form [type=email]:focus {
+  outline: none;
+}
+.newsletter__form ::placeholder {
+  color: rgb(100, 100, 100);
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+.newsletter__form [type=submit] {
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  margin-top: 1.75em;
+}
+
+/* styles for footer section */
+.footer {
+  padding: 0 1.65em;
+  background: hsl(216deg, 53%, 9%);
+  padding-bottom: 2.5em;
+}
+.footer__logo {
+  width: 12em;
+  padding-top: 4em;
+  margin: 0 1em 2.25em 0.75em;
+}
+.footer__desc {
+  margin-bottom: 1.25em;
+}
+.footer__desc i {
+  float: left;
+}
+.footer__desc i img {
+  width: 1em;
+}
+.footer__desc p {
+  padding-left: 3em;
+}
+.footer__link {
+  margin-bottom: 1.25em;
+}
+.footer__link i {
+  float: left;
+  padding-right: 2em;
+}
+.footer__link i img {
+  width: 1em;
+}
+.footer .column:nth-child(1) i, .footer .column:nth-child(2) i {
+  padding-top: 0.3em;
+}
+.footer .column:nth-child(2) {
+  margin-bottom: 4.5em;
+}
+.footer .column:nth-child(3) {
+  margin-bottom: 3.5em;
+}
+.footer .column:nth-child(4) {
+  margin-bottom: 4.5em;
+}
+.footer .column:nth-child(5) ul {
+  text-align: center;
+}
+.footer .column:nth-child(5) li {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.3em 0;
+  width: 2em;
+  border: 0.01em solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+
+/**
+* Clear inner floats
+*/
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+  overflow: hidden;
+}
+
+/* helper classes */
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*# sourceMappingURL=/main.ca7b36d6.css.map */
