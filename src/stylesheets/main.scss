@@ -326,24 +326,32 @@ h6,
     }
   
     .column {
-      &:nth-child(1), &:nth-child(2) {
+      &__part {
+        &:nth-child(1), &:nth-child(2){
+          i {
+            padding-top: 0.3em;
+          }
+        }
+      }
+
+      &:nth-child(3) {
         i {
           padding-top: 0.3em;
         }
       }
-      &:nth-child(2) {
-        margin-bottom: 4.5em;
-      }
-  
       &:nth-child(3) {
-        margin-bottom: 3.5em;
+        margin-bottom: 4.5em;
       }
   
       &:nth-child(4) {
-        margin-bottom: 4.5em;
+        margin-bottom: 3.5em;
       }
   
       &:nth-child(5) {
+        margin-bottom: 4.5em;
+      }
+  
+      &:nth-child(6) {
         ul {
           text-align: center;
         }
@@ -621,22 +629,91 @@ h6,
   .footer {
     padding-top: 14em;
 
-    .columns {
-      display: flex;
-      justify-content: space-around;
-    }
-
     &__logo {
-      padding-top: 0;
+      width: auto;
       margin: 0;
+      padding: 0;
     }
 
-    &__desc {
-      width: 20%;
+    .columns {
+      display: grid;
+      // grid-template-rows: auto 3fr;
+      grid-template-columns: 8rem 25% repeat(4, auto);    
     }
+
+    // &__logo {
+    //   padding-top: 0;
+    //   margin: 0;
+    // }
+
+    // &__desc {
+    //   width: 20%;
+    // }
 
     .column {
       margin-bottom: 0;
+
+      &__part {
+        &:nth-child(1), &:nth-child(2){
+          i {
+            padding-top: 0;
+          }
+        }
+
+        &:nth-child(1) {
+          grid-row: 1 / 2;
+          grid-column: 2 / 3;
+        }
+
+        &:nth-child(2) {
+          // flex: 2;
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+          margin-bottom: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        i {
+          padding-top: 0;
+        }
+      }
+  
+      &:nth-child(3) {
+        // flex: 1;
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+        margin-bottom: 0;
+      }
+  
+      &:nth-child(4) {
+        // flex: 1;
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+        margin-bottom: 0;
+      }
+  
+      &:nth-child(5) {
+        // flex: 1.5;
+        grid-row: 2 / 3;
+        grid-column: 5 / 6;
+        ul {
+          // text-align: center;
+        }
+        li {
+          // display: inline-block;
+          // margin-right: 0.5em;
+          // padding: 0.3em 0;
+          // width: 2em;
+          // border: 0.01em solid $neutral;
+          // border-radius: 50%;
+        }
+      }
+
+      &:nth-child(6) {
+        grid-row: 2 / 3;
+        grid-column: 6 / 7;
+      }
     }
   }
 }
