@@ -538,18 +538,35 @@ h6,
   }
   .footer__logo {
     width: auto;
-    margin: 0;
+    margin-bottom: 1.25em;
     padding: 0;
+  }
+  .footer__desc {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+  .footer__desc i img {
+    width: 0.85em;
+  }
+  .footer__desc p {
+    padding-left: 2.6em;
+  }
+  .footer__link {
+    margin-bottom: 1.2em;
+  }
+  .footer__link i {
+    padding-right: 1.5em;
+  }
+  .footer__link i img {
+    width: 1.25em;
   }
   .footer .columns {
     display: grid;
     grid-template-columns: 8rem 25% repeat(4, auto);
+    grid-gap: 0.5em;
   }
   .footer .column {
     margin-bottom: 0;
-  }
-  .footer .column__part:nth-child(1) i, .footer .column__part:nth-child(2) i {
-    padding-top: 0;
   }
   .footer .column__part:nth-child(1) {
     grid-row: 1/2;
@@ -560,26 +577,38 @@ h6,
     grid-column: 2/3;
     margin-bottom: 0;
   }
-  .footer .column:nth-child(3) i {
-    padding-top: 0;
-  }
   .footer .column:nth-child(3) {
     grid-row: 2/3;
     grid-column: 3/4;
     margin-bottom: 0;
+    justify-self: center;
+  }
+  .footer .column:nth-child(3) i {
+    padding-top: 0;
   }
   .footer .column:nth-child(4) {
     grid-row: 2/3;
     grid-column: 4/5;
     margin-bottom: 0;
+    justify-self: center;
+  }
+  .footer .column:nth-child(4) ul {
+    font-size: 1rem;
   }
   .footer .column:nth-child(5) {
     grid-row: 2/3;
     grid-column: 5/6;
+    justify-self: center;
+  }
+  .footer .column:nth-child(5) ul {
+    font-size: 1rem;
   }
   .footer .column:nth-child(6) {
     grid-row: 2/3;
     grid-column: 6/7;
+  }
+  .footer .column:nth-child(6) li {
+    margin-right: 0.6em;
   }
 }
 /**
@@ -590,20 +619,6 @@ h6,
   content: "";
   display: table;
   overflow: hidden;
-}
-
-/* helper classes */
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
 }
 
 /**
