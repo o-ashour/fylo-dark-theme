@@ -57,6 +57,15 @@ h6,
     font-size: 0.75rem;
     margin-left: 1.2em;
   }
+
+  a, a:visited {
+    color: $neutral;
+  }
+
+  a:hover {
+    font-weight: weight('semi-bold');
+    text-decoration: underline;
+  }
 }
 
 /* styles for hero section */
@@ -91,11 +100,15 @@ h6,
     border: none;
     color: $neutral;
     margin-bottom: 2em;
-    // padding: 1.1em 5em;
     padding: 1.1em 0;
     border-radius: 2em;
     font-size: 0.8rem;
     font-weight: weight('semi-bold');
+
+    &:hover {
+      cursor: pointer;
+      background: lighten($accent-1, 10%);
+    }
   }
 }
 
@@ -159,6 +172,27 @@ h6,
       position: relative;
       top: 0.28em;
       margin-left: 0.25em;
+      // font-size: 3rem;
+      &:hover {
+        // filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+      }
+
+    }
+
+    img {
+      color: $neutral;
+      // filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(10deg) brightness(50%) contrast(100%);
+      // filter: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(2%) hue-rotate(356deg) brightness(106%) contrast(0%);
+    }
+
+
+
+    &:hover {
+      color: $neutral;
+      cursor: pointer;
+      // filter: brightness(100) saturate(0%);
+      // filter: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(2%) hue-rotate(356deg) brightness(106%) contrast(100%);
+
     }
   }
 }
@@ -371,6 +405,8 @@ h6,
     background: url('../assets/images/bg-curvy-desktop.svg') no-repeat bottom;
     background-size: contain;
     background-color: hsl(217deg, 28%, 15%);
+    padding-left: 0;
+    padding-right: 0;
 
     &__title {
       width: 52%;
@@ -592,6 +628,8 @@ h6,
 
   .footer {
     padding-top: 14em;
+    padding-left: 0;
+    padding-right: 0;
 
     &__logo {
       width: auto;
@@ -628,7 +666,7 @@ h6,
 
     .columns {
       display: grid;
-      grid-template-columns: 8rem 25% repeat(4, auto); 
+      grid-template-columns: 8% 25% repeat(4, auto); 
       grid-gap: 0.5em;   
     }
 

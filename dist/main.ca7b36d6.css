@@ -90,6 +90,13 @@ h6,
   font-size: 0.75rem;
   margin-left: 1.2em;
 }
+.header a, .header a:visited {
+  color: hsl(0deg, 0%, 100%);
+}
+.header a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 /* styles for hero section */
 .hero {
@@ -124,6 +131,10 @@ h6,
   border-radius: 2em;
   font-size: 0.8rem;
   font-weight: 600;
+}
+.hero .btn--primary:hover {
+  cursor: pointer;
+  background: #90eae4;
 }
 
 /* styles for feature section */
@@ -177,6 +188,13 @@ h6,
   position: relative;
   top: 0.28em;
   margin-left: 0.25em;
+}
+.c2a .btn--secondary img {
+  color: hsl(0deg, 0%, 100%);
+}
+.c2a .btn--secondary:hover {
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
 }
 
 /* styles for testimonial section */
@@ -350,6 +368,8 @@ h6,
     background: url("/bg-curvy-desktop.d38e5f9c.svg") no-repeat bottom;
     background-size: contain;
     background-color: hsl(217deg, 28%, 15%);
+    padding-left: 0;
+    padding-right: 0;
   }
   .hero__title {
     width: 52%;
@@ -535,6 +555,8 @@ h6,
 
   .footer {
     padding-top: 14em;
+    padding-left: 0;
+    padding-right: 0;
   }
   .footer__logo {
     width: auto;
@@ -562,7 +584,7 @@ h6,
   }
   .footer .columns {
     display: grid;
-    grid-template-columns: 8rem 25% repeat(4, auto);
+    grid-template-columns: 8% 25% repeat(4, auto);
     grid-gap: 0.5em;
   }
   .footer .column {
