@@ -172,27 +172,11 @@ h6,
       position: relative;
       top: 0.28em;
       margin-left: 0.25em;
-      // font-size: 3rem;
-      &:hover {
-        // filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-      }
-
     }
-
-    img {
-      color: $neutral;
-      // filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(10deg) brightness(50%) contrast(100%);
-      // filter: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(2%) hue-rotate(356deg) brightness(106%) contrast(0%);
-    }
-
-
 
     &:hover {
-      color: $neutral;
       cursor: pointer;
-      // filter: brightness(100) saturate(0%);
-      // filter: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(2%) hue-rotate(356deg) brightness(106%) contrast(100%);
-
+      filter: sepia(0) saturate(0) hue-rotate(356deg) brightness(120%) contrast(100%);
     }
   }
 }
@@ -284,6 +268,12 @@ h6,
       font-size: 0.7rem;
     }
 
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
     [type=email]:focus {
       outline: none;
     }
@@ -300,11 +290,29 @@ h6,
       color: $neutral;
       font-weight: weight('semi-bold');
       margin-top: 1.75em;
+
+      &:hover {
+        cursor: pointer;
+        background: lighten($accent-1, 10%);
+      }
+    }
+
+    &:invalid fieldset::after {
+      font-size: 0.75rem;
+      margin-bottom: 0.75rem;
+      margin-left: 2.5em;
+      content: "Please enter a valid email address";
+      color: $accent-error;
     }
   }
 }
 
 /* styles for footer section */  
+
+ .fa-brands {
+   color: $neutral;
+ }
+ 
  .footer {
    @include docSidePadding;
    background-color: $dark-blue-3;
@@ -334,15 +342,24 @@ h6,
   
     &__link {
       margin-bottom: 1.25em;
+
+      a, a:visited {
+        color: $neutral;
+      }
       
       i {
         float: left;
         padding-right: 2em;
+        // color: #fff;
   
         img {
           width: 1em;
         }
       }
+
+      // .fa-brands, .fa-brands:visited {
+      //   color: #fff;
+      // }
     }
   
     .column {
@@ -362,6 +379,12 @@ h6,
       &:nth-child(3) {
         margin-bottom: 4.5em;
       }
+
+      &:nth-child(4), &:nth-child(5) {
+        li:hover {
+          font-weight: weight('semi-bold');
+        }
+      }
   
       &:nth-child(4) {
         margin-bottom: 3.5em;
@@ -375,6 +398,14 @@ h6,
         ul {
           text-align: center;
         }
+        a:hover li {
+          border-color: $accent-1;
+        }
+
+        a:hover i {
+          color: $accent-1;
+        }
+        
         li {
           display: inline-block;
           margin-right: 0.5em;
@@ -594,8 +625,11 @@ h6,
       display: flex;
       gap: 2em;
 
-      [type=email] {
+      fieldset {
         flex: 2;
+      }
+
+      [type=email] {
         padding: 1.6em 3em;
         border-radius: 3em;
       }
@@ -610,6 +644,14 @@ h6,
         padding: 1em 0.5em;
         font-family: $font-1;
         font-size: 0.9rem;
+      }
+      
+      &:invalid fieldset::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 0.75rem;
+        margin-left: 8.75em;
       }
     }
 

@@ -189,12 +189,9 @@ h6,
   top: 0.28em;
   margin-left: 0.25em;
 }
-.c2a .btn--secondary img {
-  color: hsl(0deg, 0%, 100%);
-}
 .c2a .btn--secondary:hover {
-  color: hsl(0deg, 0%, 100%);
   cursor: pointer;
+  filter: sepia(0) saturate(0) hue-rotate(356deg) brightness(120%) contrast(100%);
 }
 
 /* styles for testimonial section */
@@ -276,6 +273,11 @@ h6,
   border-radius: 2em;
   font-size: 0.7rem;
 }
+.newsletter__form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 .newsletter__form [type=email]:focus {
   outline: none;
 }
@@ -290,8 +292,23 @@ h6,
   font-weight: 600;
   margin-top: 1.75em;
 }
+.newsletter__form [type=submit]:hover {
+  cursor: pointer;
+  background: #90eae4;
+}
+.newsletter__form:invalid fieldset::after {
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+  margin-left: 2.5em;
+  content: "Please enter a valid email address";
+  color: hsl(0deg, 100%, 63%);
+}
 
 /* styles for footer section */
+.fa-brands {
+  color: hsl(0deg, 0%, 100%);
+}
+
 .footer {
   padding: 0 1.65em;
   background-color: hsl(216deg, 53%, 9%);
@@ -317,6 +334,9 @@ h6,
 .footer__link {
   margin-bottom: 1.25em;
 }
+.footer__link a, .footer__link a:visited {
+  color: hsl(0deg, 0%, 100%);
+}
 .footer__link i {
   float: left;
   padding-right: 2em;
@@ -333,6 +353,9 @@ h6,
 .footer .column:nth-child(3) {
   margin-bottom: 4.5em;
 }
+.footer .column:nth-child(4) li:hover, .footer .column:nth-child(5) li:hover {
+  font-weight: 600;
+}
 .footer .column:nth-child(4) {
   margin-bottom: 3.5em;
 }
@@ -341,6 +364,12 @@ h6,
 }
 .footer .column:nth-child(6) ul {
   text-align: center;
+}
+.footer .column:nth-child(6) a:hover li {
+  border-color: hsl(176deg, 68%, 64%);
+}
+.footer .column:nth-child(6) a:hover i {
+  color: hsl(176deg, 68%, 64%);
 }
 .footer .column:nth-child(6) li {
   display: inline-block;
@@ -526,8 +555,10 @@ h6,
     display: flex;
     gap: 2em;
   }
-  .newsletter__form [type=email] {
+  .newsletter__form fieldset {
     flex: 2;
+  }
+  .newsletter__form [type=email] {
     padding: 1.6em 3em;
     border-radius: 3em;
   }
@@ -540,6 +571,13 @@ h6,
     padding: 1em 0.5em;
     font-family: "Raleway", sans-serif;
     font-size: 0.9rem;
+  }
+  .newsletter__form:invalid fieldset::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0.75rem;
+    margin-left: 8.75em;
   }
   .newsletter .wrapper {
     background-color: hsl(217deg, 28%, 15%);
