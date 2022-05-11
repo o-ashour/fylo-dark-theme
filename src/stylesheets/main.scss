@@ -421,14 +421,14 @@ h6,
 /* Adjust for larger screen size */
 @media (min-width: map-get($breakpoints, 'medium')) {
   .header {
-    padding: 5.5em 6em;
+    padding: 3em 3em;
     &__logo {
-      width: 12.5em;
+      width: 10em;
     }
 
     &__link {
-      font-size: 1rem;
-      margin-left: 3.5em;
+      font-size: 0.96rem;
+      margin-left: 2em;
     }
   }
 
@@ -439,26 +439,31 @@ h6,
     padding-left: 0;
     padding-right: 0;
 
+    &__img {
+      height: 40vh;
+    }
+
     &__title {
-      width: 52%;
-      font-size: 2.5rem;
-      line-height: 1.45;
+      width: 74%;
+      font-size: 2.25rem;
+      line-height: 1.25;
       margin: 0 auto;
       margin-top: 0.25em;
     }
 
     &__desc {
-      font-size: 1.2rem;
-      width: 57%;
+      font-size: 1.1rem;
+      width: 75%;
       margin: 1.5em auto;
       margin-bottom: 1.75em;
       padding: 0 5em;
     }
 
     .btn--primary {
-      width: 21%;
+      width: 32%;
       font-size: 1rem;
-      padding: 1.2em 0em;
+      margin-bottom: 0;
+      padding: 1.05em 0em;
     }
   }
 
@@ -468,9 +473,10 @@ h6,
 
     .wrapper {
       display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-column-gap: 1em;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 3em;
     }
+
     .feature {  
       &__img {
         height: 5.5em;
@@ -486,49 +492,48 @@ h6,
       }
 
       &:nth-child(1) {
-        grid-column: 2;
+        grid-column: 1;
       }
 
       &:nth-child(2) {
-        grid-column: 3;
-      }
-
-      &:nth-child(3) {
         grid-column: 2;
       }
 
+      &:nth-child(3) {
+        grid-column: 1;
+      }
+
       &:nth-child(4) {
-        grid-column: 3;
+        grid-column: 2;
       }
     }
   }
 
   .c2a {
-    padding: 0 8em;
+    padding: 0 4em;
+    margin-top: 8em;
 
     .wrapper {
-      flex-direction: row;
       align-items: center;
     }
 
     &__img {
-      min-width: 50%;
+      width: 77%;
     }
 
     &__content {
-      margin-top: 0;
-      margin-left: 4em;
+      margin-left: 0;
     }
 
     &__title {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       margin-left: 0;
       margin-bottom: 0.6em;
-      padding-right: 1.5em;
+      padding-right: 0;
     }
 
     &__desc {
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.45;
     }
 
@@ -541,17 +546,19 @@ h6,
 
   .testimonials {
     margin-bottom: 2em;
+    padding-top: 5.5em;
 
     .wrapper {
       display: grid;
-      grid-template-columns: 0.25fr 1fr 1fr 1fr 0.25fr;
+      grid-template-columns: 1fr 1fr 1fr;
       /* grid-column-gap is depracated, but including it to cover more cases */
-      grid-column-gap: 3em;
-      column-gap: 3em;
+      grid-column-gap: 1em;
+      column-gap: 1em;
       position: relative;
+      margin: 0 3em;
 
       &::before {
-        grid-column: 2;
+        grid-column: 1;
         height: 6em;
         top: -2.6em;
         left: -0.7em;
@@ -560,7 +567,7 @@ h6,
     }
 
     .testimonial {
-      padding: 2.5em 2em 1.75em;
+      padding: 2.5em 1.75em 1.75em;
       box-shadow: 2px 2px 4px $dark-blue-4;
 
       &__desc {
@@ -586,17 +593,17 @@ h6,
       }
 
       &:nth-child(1) {
-        grid-column: 2;
+        grid-column: 1;
         margin: 0;
       }
 
       &:nth-child(2) {
-        grid-column: 3;
+        grid-column: 2;
         margin: 0;
       }
 
       &:nth-child(3) {
-        grid-column: 4;
+        grid-column: 3;
         margin: 0;
       }
     }
@@ -606,7 +613,7 @@ h6,
     height: 10em;
     background-color: $dark-blue-2;
     margin: 0;
-    margin-top: 14em;
+    margin-top: 12em;
     padding: 0;
     border-radius: 0;
 
@@ -624,14 +631,17 @@ h6,
     &__form {
       display: flex;
       gap: 2em;
+      margin-bottom: 0.25em;
+      padding-bottom: 0;
 
       fieldset {
         flex: 2;
       }
 
       [type=email] {
-        padding: 1.6em 3em;
+        padding: 1.25em 3em;
         border-radius: 3em;
+        font-size: 0.8rem;
       }
 
       ::placeholder {
@@ -643,7 +653,7 @@ h6,
         margin-top: 0;
         padding: 1em 0.5em;
         font-family: $font-1;
-        font-size: 0.9rem;
+        font-size: 0.825rem;
       }
       
       &:invalid fieldset::after {
@@ -651,17 +661,17 @@ h6,
         bottom: 0;
         left: 0;
         margin-bottom: 0.75rem;
-        margin-left: 8.75em;
+        margin-left: 7.75em;
       }
     }
 
     .wrapper {
       background-color: $dark-blue-1;
       box-shadow: 0.5em 0.6em 0.5em rgba(0, 0, 0, 0.2);      
-      margin: 10em 1.65em 1em;
+      // margin: 10em 1.65em 1em;
       padding: 3em 5em 2.5em;      
       border-radius: .2rem;
-      width: 60%;
+      width: 81%;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -674,8 +684,9 @@ h6,
     padding-right: 0;
 
     &__logo {
-      width: auto;
-      margin-bottom: 1.25em;
+      width: 10em;
+      margin: 0;
+      margin-bottom: 1.75em;
       padding: 0;
     }
 
@@ -695,7 +706,7 @@ h6,
     }
 
     &__link {
-      margin-bottom: 1.2em;
+      margin-bottom: 0.75em;
 
       i {
         padding-right: 1.5em;
@@ -708,8 +719,8 @@ h6,
 
     .columns {
       display: grid;
-      grid-template-columns: 8% 25% repeat(4, auto); 
-      grid-gap: 0.5em;   
+      grid-template-columns: 36% repeat(4, auto); 
+      margin: 4em 3em 0; 
     }
 
     .column {
@@ -718,29 +729,28 @@ h6,
       &__part {
         &:nth-child(1) {
           grid-row: 1 / 2;
-          grid-column: 2 / 3;
+          grid-column: 1 / 2;
         }
 
         &:nth-child(2) {
           grid-row: 2 / 3;
-          grid-column: 2 / 3;
+          grid-column: 1 / 2;
           margin-bottom: 0;
         }
       }
   
       &:nth-child(3) {
-        grid-row: 2 / 3;
-        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
         margin-bottom: 0;
         i {
           padding-top: 0;
         }
-        justify-self: center;
       }
   
       &:nth-child(4) {
         grid-row: 2 / 3;
-        grid-column: 4 / 5;
+        grid-column: 3 / 4;
         margin-bottom: 0;
         justify-self: center;
 
@@ -751,8 +761,9 @@ h6,
   
       &:nth-child(5) {
         grid-row: 2 / 3;
-        grid-column: 5 / 6;
+        grid-column: 4 / 5;
         justify-self: center;
+        margin-bottom: 0;
 
         ul {
           font-size: 1rem;
@@ -761,7 +772,7 @@ h6,
 
       &:nth-child(6) {
         grid-row: 2 / 3;
-        grid-column: 6 / 7;
+        grid-column: 5 / 6;
 
         li {
           margin-right: 0.6em;
@@ -771,29 +782,209 @@ h6,
   }
 }
 
+@media (min-width: map-get($breakpoints, 'large')) {
+  .header {
+    padding: 5.5em 6em;
 
-  /**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
-  overflow: hidden;
-}
+    &__logo {
+      width: 12.5em;
+    }
+  
+    &__link {
+      font-size: 1rem;
+      margin-left: 3.5em;
+    }
+  }
 
-/**
- * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  .hero {
+    &__img {
+      height: auto;
+    }
+
+    &__title {
+      width: 52%;
+      font-size: 2.5rem;
+      line-height: 1.45;
+    }
+
+    &__desc {
+      font-size: 1.2rem;
+      width: 57%;
+    }
+
+    .btn--primary {
+      width: 21%;
+      margin-bottom: 2em;
+      padding: 1.2em 0em;
+    }
+  }
+
+  .features {
+    .wrapper {
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-column-gap: 1em;
+      column-gap: 1em;
+      margin: 0;
+    }
+
+    .feature {
+      &:nth-child(1) {
+        grid-column: 2;
+      }
+  
+      &:nth-child(2) {
+        grid-column: 3;
+      }
+  
+      &:nth-child(3) {
+        grid-column: 2;
+      }
+  
+      &:nth-child(4) {
+        grid-column: 3;
+      }
+    }
+  }
+
+  .c2a {
+    padding: 0 8em;
+    margin-top: 0;
+
+    .wrapper {
+      flex-direction: row;
+    }
+
+    &__img {
+      min-width: 50%;
+    }
+
+    &__content {
+      margin-top: 0;
+      margin-left: 4em;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      padding-right: 1.5em;
+    }
+
+    &__desc {
+      font-size: 1rem;
+    }
+  }
+
+  .testimonials {
+    padding-top: 1.5em;
+
+    .wrapper {
+      grid-template-columns: 0.25fr 1fr 1fr 1fr 0.25fr;
+      /* grid-column-gap is depracated, but including it to cover more cases */
+      grid-column-gap: 3em;
+      column-gap: 3em;
+      margin: 0;
+
+      &::before {
+        grid-column: 2;
+      }
+    }
+
+    .testimonial {
+      padding-right: 2em;
+      padding-left: 2em;
+
+      &:nth-child(1) {
+        grid-column: 2;
+      }
+
+      &:nth-child(2) {
+        grid-column: 3;
+      }
+
+      &:nth-child(3) {
+        grid-column: 4;
+      }
+    }
+  }
+
+  .newsletter {
+    margin-top: 14em;
+
+    .wrapper {
+      width: 60%;
+    }
+
+    &__form {
+      margin-bottom: 0;
+      padding-bottom: 1.25em;
+
+
+      [type=email] {
+        font-size: 1rem;
+        padding-top: 1.65em;
+        padding-bottom: 1.65em;
+      }
+
+      [type=submit] {
+        font-size: 0.9rem;
+      }
+
+      &:invalid fieldset::after {
+        margin-left: 8.75em;
+      }
+    }
+  }
+
+  .footer {
+    &__logo {
+      width: auto;
+      margin: 0 1em 2.25em 0.75em;
+      margin-bottom: 1.25em;
+    }
+
+    &__link {
+      margin-bottom: 1.2em;
+    }
+
+    .columns {
+      grid-template-columns: 8% 25% repeat(4, auto); 
+      grid-gap: 0.5em;
+      margin: 0; 
+    }
+
+    .column {
+      &__part {
+        &:nth-child(1) {
+          grid-row: 1 / 2;
+          grid-column: 2 / 3;
+        }
+
+        &:nth-child(2) {
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+        }
+      }
+  
+      &:nth-child(3) {
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+        justify-self: center;
+      }
+  
+      &:nth-child(4) {
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+      }
+  
+      &:nth-child(5) {
+        grid-row: 2 / 3;
+        grid-column: 5 / 6;
+        margin-bottom: 4.5em;
+      }
+
+      &:nth-child(6) {
+        grid-row: 2 / 3;
+        grid-column: 6 / 7;
+      }
+    }
+  }
 }
