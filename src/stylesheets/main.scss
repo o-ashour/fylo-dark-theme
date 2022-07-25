@@ -100,7 +100,8 @@ h6,
 
   /* styles for main buttons */
   .btn--primary {
-    width: 77%;
+    // width: 77%;
+    width: 18em;
     background: $accent-gradient;
     border: none;
     color: $neutral;
@@ -264,10 +265,15 @@ h6,
   }
 
   &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     /* styles for form email input */
     [type=email], [type=submit] {
       border: none;
-      width: 100%;
+      // width: 100%;
+      width: 24em;
       padding: 1.2em 2.4em;
       border-radius: 2em;
       font-size: 0.7rem;
@@ -666,7 +672,8 @@ h6,
       [type=submit] {
         flex: 1;
         margin-top: 0;
-        padding: 1em 0.5em;
+        // padding: 1em 0.5em;
+        padding: 1.25em 3em;
         font-family: $font-1;
         font-size: 0.825rem;
       }
@@ -935,8 +942,8 @@ h6,
 
       [type=email] {
         font-size: 1rem;
-        padding-top: 1.65em;
-        padding-bottom: 1.65em;
+        padding-top: 1em;
+        padding-bottom: 1em;
       }
 
       [type=submit] {

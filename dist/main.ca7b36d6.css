@@ -130,7 +130,7 @@ h6,
   margin-bottom: 2em;
 }
 .hero .btn--primary {
-  width: 77%;
+  width: 18em;
   background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
   border: none;
   color: hsl(0deg, 0%, 100%);
@@ -271,12 +271,15 @@ h6,
   margin-bottom: 1em;
 }
 .newsletter__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* styles for form email input */
   /* styles for email submit button */
 }
 .newsletter__form [type=email], .newsletter__form [type=submit] {
   border: none;
-  width: 100%;
+  width: 24em;
   padding: 1.2em 2.4em;
   border-radius: 2em;
   font-size: 0.7rem;
@@ -590,7 +593,7 @@ h6,
   .newsletter__form [type=submit] {
     flex: 1;
     margin-top: 0;
-    padding: 1em 0.5em;
+    padding: 1.25em 3em;
     font-family: "Raleway", sans-serif;
     font-size: 0.825rem;
   }
@@ -803,8 +806,8 @@ h6,
   }
   .newsletter__form [type=email] {
     font-size: 1rem;
-    padding-top: 1.65em;
-    padding-bottom: 1.65em;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
   .newsletter__form [type=submit] {
     font-size: 0.9rem;
