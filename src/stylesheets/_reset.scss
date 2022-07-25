@@ -1,9 +1,17 @@
 // Reset for styles
 
+// Configuration (variables, functions, etc)
+@use
+  './config' as *;
+  
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: 3px dashed $white;
 }
 
 img,
