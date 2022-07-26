@@ -1,4 +1,4 @@
-/* current issues: background image (mobile), site deployment */
+/* current issues: site deployment */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
 *,
 *::before,
@@ -260,6 +260,10 @@ h6,
 
 /* styles for newsletter sign-up section */
 .newsletter {
+  height: 11em;
+}
+.newsletter .wrapper {
+  position: relative;
   background: hsl(217deg, 28%, 15%);
   margin: 10em 1.65em 1em;
   padding: 2em;
@@ -328,6 +332,7 @@ h6,
 .footer {
   padding: 0 1.65em;
   background-color: hsl(216deg, 53%, 9%);
+  padding-top: 14em;
   padding-bottom: 2.5em;
 }
 .footer__logo {
@@ -480,7 +485,7 @@ h6,
 
   .c2a {
     padding: 0 4em;
-    margin-top: 8em;
+    margin-top: 0;
   }
   .c2a .wrapper {
     align-items: center;
@@ -490,6 +495,7 @@ h6,
   }
   .c2a__content {
     margin-left: 0;
+    margin-top: 4em;
   }
   .c2a__title {
     font-size: 2.25rem;
@@ -509,7 +515,7 @@ h6,
 
   .testimonials {
     margin-bottom: 2em;
-    padding-top: 5.5em;
+    padding-top: 3.5em;
   }
   .testimonials .wrapper {
     display: grid;
@@ -565,7 +571,7 @@ h6,
     height: 10em;
     background-color: hsl(218deg, 28%, 13%);
     margin: 0;
-    margin-top: 12em;
+    margin-top: 10em;
     padding: 0;
     border-radius: 0;
   }
@@ -620,7 +626,7 @@ h6,
   }
 
   .footer {
-    padding-top: 14em;
+    padding-top: 19em;
     padding-left: 0;
     padding-right: 0;
   }
@@ -750,8 +756,8 @@ h6,
   }
 
   .c2a {
+    margin-bottom: 11em;
     padding: 0 8em;
-    margin-top: 0;
   }
   .c2a .wrapper {
     flex-direction: row;
@@ -785,6 +791,7 @@ h6,
     grid-column: 2;
   }
   .testimonials .testimonial {
+    padding-top: 2.75em;
     padding-right: 2em;
     padding-left: 2em;
   }
@@ -799,10 +806,15 @@ h6,
   }
 
   .newsletter {
+    height: 12em;
     margin-top: 14em;
   }
   .newsletter .wrapper {
     width: 60%;
+  }
+  .newsletter__desc {
+    padding-left: 4em;
+    padding-right: 4em;
   }
   .newsletter__form {
     flex-direction: row;
@@ -820,11 +832,12 @@ h6,
     font-size: 0.9rem;
   }
   .newsletter__form:invalid fieldset::after {
-    margin-left: 8.75em;
+    margin-top: 0.75em;
+    margin-left: 1.75em;
   }
 
   .footer {
-    padding-top: 21em;
+    padding-top: 16em;
   }
   .footer__logo {
     width: auto;

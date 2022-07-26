@@ -1,4 +1,4 @@
-/* current issues: background image (mobile), site deployment */
+/* current issues: site deployment */
 
 @charset "UTF-8";
 
@@ -251,10 +251,18 @@ h6,
 
 /* styles for newsletter sign-up section */
 .newsletter {
-  background: $dark-blue-1;
-  margin: 10em 1.65em 1em;
-  padding: 2em;
-  border-radius: .2rem;
+  height: 11em;
+  // margin: 10em 1.65em 1em;
+  // padding: 2em;
+  // border-radius: .2rem;
+
+  .wrapper {
+    position: relative;
+    background: $dark-blue-1;
+    margin: 10em 1.65em 1em;
+    padding: 2em;
+    border-radius: .2rem;
+  }
 
   &__content {
     text-align: center;
@@ -329,6 +337,7 @@ h6,
  .footer {
    @include docSidePadding;
    background-color: $dark-blue-3;
+   padding-top: 14em;
    padding-bottom: 2.5em;
   
    &__logo {
@@ -529,7 +538,7 @@ h6,
 
   .c2a {
     padding: 0 4em;
-    margin-top: 8em;
+    margin-top: 0;
 
     .wrapper {
       align-items: center;
@@ -541,6 +550,7 @@ h6,
 
     &__content {
       margin-left: 0;
+      margin-top: 4em;
     }
 
     &__title {
@@ -564,7 +574,7 @@ h6,
 
   .testimonials {
     margin-bottom: 2em;
-    padding-top: 5.5em;
+    padding-top: 3.5em;
 
     .wrapper {
       display: grid;
@@ -631,7 +641,7 @@ h6,
     height: 10em;
     background-color: $dark-blue-2;
     margin: 0;
-    margin-top: 12em;
+    margin-top: 10em;
     padding: 0;
     border-radius: 0;
 
@@ -695,7 +705,7 @@ h6,
   }
 
   .footer {
-    padding-top: 14em;
+    padding-top: 19em;
     padding-left: 0;
     padding-right: 0;
 
@@ -863,8 +873,8 @@ h6,
   }
 
   .c2a {
+    margin-bottom: 11em;
     padding: 0 8em;
-    margin-top: 0;
 
     .wrapper {
       flex-direction: row;
@@ -905,6 +915,7 @@ h6,
     }
 
     .testimonial {
+      padding-top: 2.75em;
       padding-right: 2em;
       padding-left: 2em;
 
@@ -923,10 +934,16 @@ h6,
   }
 
   .newsletter {
+    height: 12em;
     margin-top: 14em;
 
     .wrapper {
       width: 60%;
+    }
+
+    &__desc {
+      padding-left: 4em;
+      padding-right: 4em;
     }
 
     &__form {
@@ -948,13 +965,14 @@ h6,
       }
 
       &:invalid fieldset::after {
-        margin-left: 8.75em;
+        margin-top: 0.75em;
+        margin-left: 1.75em;
       }
     }
   }
 
   .footer {
-    padding-top: 21em;
+    padding-top: 16em;
 
     &__logo {
       width: auto;
