@@ -100,7 +100,6 @@ h6,
 
   /* styles for main buttons */
   .btn--primary {
-    // width: 77%;
     width: 18em;
     background: $accent-gradient;
     border: none;
@@ -192,6 +191,7 @@ h6,
   padding-top: 1.5em;
 
   .wrapper {
+    position: relative;
       /* pseudo class for placing quote background */
     &::before {
       background: url('../assets/images/bg-quotes.png');
@@ -199,9 +199,10 @@ h6,
       content: '';
       position: absolute;
       height: 2em;
-      width: 100%;
+      width: 4em;
       background-size: 1.5em;
-      left: 3em;
+      top: -1.1em;
+      left: 3.15em;
       z-index: -1;
     }
   }
@@ -272,7 +273,6 @@ h6,
     /* styles for form email input */
     [type=email], [type=submit] {
       border: none;
-      // width: 100%;
       width: 24em;
       padding: 1.2em 2.4em;
       border-radius: 2em;
@@ -280,6 +280,8 @@ h6,
     }
 
     fieldset {
+      position: relative;
+      width: 19em;
       border: none;
       padding: 0;
       margin: 0;
@@ -300,7 +302,7 @@ h6,
       background: $accent-gradient;
       color: $neutral;
       font-weight: weight('semi-bold');
-      margin-top: 1.75em;
+      margin-top: 3em;
 
       &:hover, &:focus {
         cursor: pointer;
@@ -309,9 +311,10 @@ h6,
     }
 
     &:invalid fieldset::after {
+      position: absolute;
       font-size: 0.75rem;
-      margin-bottom: 0.75rem;
-      margin-left: 2.5em;
+      margin-top: 0.2em;
+      margin-left: 1.5em;
       content: "Please enter a valid email address";
       color: $accent-error;
     }
@@ -319,7 +322,6 @@ h6,
 }
 
 /* styles for footer section */  
-
  .fa-brands {
    color: $neutral;
  }
@@ -361,16 +363,11 @@ h6,
       i {
         float: left;
         padding-right: 2em;
-        // color: #fff;
   
         img {
           width: 1em;
         }
       }
-
-      // .fa-brands, .fa-brands:visited {
-      //   color: #fff;
-      // }
     }
   
     .column {
@@ -671,26 +668,23 @@ h6,
 
       [type=submit] {
         flex: 1;
-        margin-top: 0;
-        // padding: 1em 0.5em;
+        margin-top: 0.5em;
         padding: 1.25em 3em;
         font-family: $font-1;
         font-size: 0.825rem;
       }
       
       &:invalid fieldset::after {
-        position: absolute;
+        top: 4em;
         bottom: 0;
         left: 0;
-        margin-bottom: 0.75rem;
-        margin-left: 7.75em;
+        margin-left: 1.75em;
       }
     }
 
     .wrapper {
       background-color: $dark-blue-1;
       box-shadow: 0.5em 0.6em 0.5em rgba(0, 0, 0, 0.2);      
-      // margin: 10em 1.65em 1em;
       padding: 3em 5em 2.5em;      
       border-radius: .2rem;
       width: 81%;
@@ -936,17 +930,20 @@ h6,
     }
 
     &__form {
+      flex-direction: row;
       margin-bottom: 0;
       padding-bottom: 1.25em;
 
 
       [type=email] {
+        width: 100%;
         font-size: 1rem;
         padding-top: 1em;
         padding-bottom: 1em;
       }
 
       [type=submit] {
+        flex: 0.5;
         font-size: 0.9rem;
       }
 
@@ -957,6 +954,8 @@ h6,
   }
 
   .footer {
+    padding-top: 21em;
+
     &__logo {
       width: auto;
       margin: 0 1em 2.25em 0.75em;

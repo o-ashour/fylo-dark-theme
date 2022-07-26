@@ -207,6 +207,7 @@ h6,
   padding-top: 1.5em;
 }
 .testimonials .wrapper {
+  position: relative;
   /* pseudo class for placing quote background */
 }
 .testimonials .wrapper::before {
@@ -215,9 +216,10 @@ h6,
   content: "";
   position: absolute;
   height: 2em;
-  width: 100%;
+  width: 4em;
   background-size: 1.5em;
-  left: 3em;
+  top: -1.1em;
+  left: 3.15em;
   z-index: -1;
 }
 
@@ -285,6 +287,8 @@ h6,
   font-size: 0.7rem;
 }
 .newsletter__form fieldset {
+  position: relative;
+  width: 19em;
   border: none;
   padding: 0;
   margin: 0;
@@ -301,16 +305,17 @@ h6,
   background: linear-gradient(to right, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
   color: hsl(0deg, 0%, 100%);
   font-weight: 600;
-  margin-top: 1.75em;
+  margin-top: 3em;
 }
 .newsletter__form [type=submit]:hover, .newsletter__form [type=submit]:focus {
   cursor: pointer;
   background: #90eae4;
 }
 .newsletter__form:invalid fieldset::after {
+  position: absolute;
   font-size: 0.75rem;
-  margin-bottom: 0.75rem;
-  margin-left: 2.5em;
+  margin-top: 0.2em;
+  margin-left: 1.5em;
   content: "Please enter a valid email address";
   color: hsl(0deg, 100%, 63%);
 }
@@ -592,17 +597,16 @@ h6,
   }
   .newsletter__form [type=submit] {
     flex: 1;
-    margin-top: 0;
+    margin-top: 0.5em;
     padding: 1.25em 3em;
     font-family: "Raleway", sans-serif;
     font-size: 0.825rem;
   }
   .newsletter__form:invalid fieldset::after {
-    position: absolute;
+    top: 4em;
     bottom: 0;
     left: 0;
-    margin-bottom: 0.75rem;
-    margin-left: 7.75em;
+    margin-left: 1.75em;
   }
   .newsletter .wrapper {
     background-color: hsl(217deg, 28%, 15%);
@@ -801,21 +805,27 @@ h6,
     width: 60%;
   }
   .newsletter__form {
+    flex-direction: row;
     margin-bottom: 0;
     padding-bottom: 1.25em;
   }
   .newsletter__form [type=email] {
+    width: 100%;
     font-size: 1rem;
     padding-top: 1em;
     padding-bottom: 1em;
   }
   .newsletter__form [type=submit] {
+    flex: 0.5;
     font-size: 0.9rem;
   }
   .newsletter__form:invalid fieldset::after {
     margin-left: 8.75em;
   }
 
+  .footer {
+    padding-top: 21em;
+  }
   .footer__logo {
     width: auto;
     margin: 0 1em 2.25em 0.75em;
