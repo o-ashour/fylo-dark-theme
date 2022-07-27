@@ -31,8 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/o-ashour/fylo-dark-theme]
-- Live Site URL: [https://csb-qtps1h.netlify.app]
+- Live Site URL: https://csb-qtps1h.netlify.app
 
 ## My process
 
